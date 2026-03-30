@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 0.12 0.035 240;
+    --foreground: 0.96 0.005 240;
+    --card: 0.16 0.04 240;
+    --card-foreground: 0.96 0.005 240;
+    --popover: 0.18 0.04 240;
+    --popover-foreground: 0.96 0.005 240;
+    --primary: 0.8 0.22 145;
+    --primary-foreground: 0.1 0.02 145;
+    --secondary: 0.22 0.045 240;
+    --secondary-foreground: 0.96 0.005 240;
+    --muted: 0.2 0.04 240;
+    --muted-foreground: 0.67 0.02 254;
+    --accent: 0.59 0.22 264;
+    --accent-foreground: 0.96 0.005 240;
+    --destructive: 0.6 0.22 22;
+    --destructive-foreground: 0.96 0.005 240;
+    --border: 0.96 0 0 / 8%;
+    --input: 0.96 0 0 / 10%;
+    --ring: 0.8 0.22 145;
+    --chart-1: 0.8 0.22 145;
+    --chart-2: 0.59 0.22 264;
+    --chart-3: 0.82 0.17 80;
+    --chart-4: 0.7 0.18 320;
+    --chart-5: 0.65 0.2 30;
+    --sidebar: 0.14 0.04 240;
+    --sidebar-foreground: 0.96 0.005 240;
+    --sidebar-primary: 0.8 0.22 145;
+    --sidebar-primary-foreground: 0.1 0.02 145;
+    --sidebar-accent: 0.22 0.045 240;
+    --sidebar-accent-foreground: 0.96 0.005 240;
+    --sidebar-border: 0.96 0 0 / 8%;
+    --sidebar-ring: 0.8 0.22 145;
+    --neon: 0.8 0.22 145;
+    --neon-foreground: 0.1 0.02 145;
+    --amber: 0.82 0.17 80;
+    --blue-progress: 0.59 0.22 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.04 240);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.4 0.04 240);
+  }
+}
+
+.glass-card {
+  background: oklch(0.16 0.04 240 / 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(0.96 0 0 / 0.08);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px oklch(0.8 0.22 145 / 0.3);
+}
+
+.neon-text {
+  color: oklch(0.8 0.22 145);
+}
+
+.amber-text {
+  color: oklch(0.82 0.17 80);
+}
+
+.blue-text {
+  color: oklch(0.59 0.22 264);
+}
